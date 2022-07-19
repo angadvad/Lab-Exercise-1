@@ -6,8 +6,6 @@ var dice = {
     }
   }
   
-  
-  
   //Prints dice roll to the page
   
   function printNumber(number) {

@@ -12,12 +12,33 @@
     width: 200px;
     cursor: pointer;
   }
+  
   #placeholder {
     height: 100px;
     width: 100px;
     padding: 50px;
     margin: 50px auto;
     border: 1px solid gray;
+    border-radius: 10px;  
+    font-size:80px;
+  }
+
+  #secondDice {
+    height: 100px;
+    width: 100px;
+    padding: 50px;
+    margin: 50px auto;
+    border: 1px solid darkblue;
+    border-radius: 10px;  
+    font-size:80px;
+  }
+
+  #thirdDice {
+    height: 100px;
+    width: 100px;
+    padding: 50px;
+    margin: 50px auto;
+    border: 1px solid   red;
     border-radius: 10px;  
     font-size:80px;
   }
