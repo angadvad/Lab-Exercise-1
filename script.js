@@ -1,7 +1,6 @@
-var dice = {
-    sides: 6,
-    roll: function () {
-      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+let dice = {
+    roll: function (sides) {
+      let randomNumber = Math.floor(Math.random() * sides) + 1;
       return randomNumber;
     }
   }
@@ -14,13 +13,14 @@ var dice = {
   }
   
   var button = document.getElementById('button');
-  let diceNum = ['d4','d6','d8','d10','d12','d20']
+  let diceStr = ['d4','d6','d8','d10','d12','d20']
+  let diceNum = [4,6,8,10,12,20];
   let result;
 
   button.onclick = function() {
-    for (let i=0; i<diceNum.length; i++){
-      result = dice.roll();
-      printNumber(result,diceNum[i]);
+    for (let i=0; i<diceStr.length; i++){
+      result = dice.roll(diceNum[i]);
+      printNumber(result,diceStr[i]);
     }
   };
   
