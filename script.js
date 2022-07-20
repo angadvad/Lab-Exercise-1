@@ -7,8 +7,8 @@ let dice = {
   
   //Prints dice roll to the page
   
-  function printNumber(number,diceNum) {
-    var dice = document.getElementById(diceNum);
+  function printNumber(number,dice) {
+    var dice = document.getElementById(dice);
     dice.innerHTML = number;
   }
   
