@@ -1,24 +1,26 @@
-var dice = {
-    sides: 6,
-    roll: function () {
-      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+let dice = {
+    roll: function (sides) {
+      let randomNumber = Math.floor(Math.random() * sides) + 1;
       return randomNumber;
     }
   }
   
-  
-  
   //Prints dice roll to the page
   
-  function printNumber(number) {
-    var placeholder = document.getElementById('placeholder');
-    placeholder.innerHTML = number;
+  function printNumber(number,dice) {
+    var dice = document.getElementById(dice);
+    dice.innerHTML = number;
   }
   
   var button = document.getElementById('button');
-  
+  let diceStr = ['d4','d6','d8','d10','d12','d20']
+  let diceNum = [4,6,8,10,12,20];
+  let result;
+
   button.onclick = function() {
-    var result = dice.roll();
-    printNumber(result);
+    for (let i=0; i<diceStr.length; i++){
+      result = dice.roll(diceNum[i]);
+      printNumber(result,diceStr[i]);
+    }
   };
   
